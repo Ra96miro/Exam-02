@@ -6,7 +6,7 @@
 /*   By: gramiro- <gramiro-@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 20:58:22 by gramiro-          #+#    #+#             */
-/*   Updated: 2022/05/26 21:22:29 by gramiro-         ###   ########.fr       */
+/*   Updated: 2022/05/28 16:26:01 by gramiro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ int ft_hexa(unsigned int n)
 
 	count = 0;
 	base = "0123456789abcdef";
-	if (n <= 16)
+	if (n < 16)
 		count += ft_putchar(base[n]);
-	if (n > 16)
+	if (n >= 16)
 	{
 		count += ft_hexa(n / 16);
 		count += ft_hexa(n % 16);
@@ -105,7 +105,7 @@ int main ()
 {
 	int len;
 	int len2;
-	len = ft_printf("S: %s D: %d X: %x\n", "ciao", -10, 42420);
-	len2= printf("S: %s D: %d X: %x\n", "ciao", -10, 42420);
+	len = ft_printf("S: %s D: %d X: %x\n", "ciao", -10, 16);
+	len2= printf("S: %s D: %d X: %x\n", "ciao", -10, 16);
 	printf("MIO: %d - VERO:  %d", len, len2);
 }
